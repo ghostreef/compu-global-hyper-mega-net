@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(function() {
+    $( ".js-left-off-canvas-toggle" ).on('click', function() {
+        $('.js-inner-wrap').toggleClass('move-right');
+        var cv = $(this).attr('aria-expanded');
+        $(this).attr('aria-expanded', cv == 'true' ? 'false' : 'true');
+    });
+});

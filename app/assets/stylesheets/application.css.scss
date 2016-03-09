@@ -10,6 +10,58 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+@import "base/*";
+@import "pages/*";
+@import "patterns/*";
+
+
+
+.off-canvas-wrap {
+  position: relative;
+  /* overflow hidden simulates body margin */
+  overflow: hidden;
+}
+
+.inner-wrap {
+  /* canvas is position absolute */
+  position: relative;
+  transition: transform 500ms ease;
+}
+
+.move-right {
+  transform: translate(14rem, 0);
+}
+
+.left-off-canvas-menu {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  transform: translate(-100.5%, 0);
+  transition: transform 500ms ease 0s;
+
+  width: 14rem;
+  z-index: 1001;
+}
+
+
+
+
+/* STYLING */
+
+.inner-wrap {
+  background: #efefef;
+}
+
+.left-off-canvas-menu {
+  background: #333333;
+}
+
+a {
+  color: #008CBA;
+}
