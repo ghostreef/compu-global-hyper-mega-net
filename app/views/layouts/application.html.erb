@@ -13,14 +13,35 @@
     <!-- Off Canvas Menu -->
     <div class="left-off-canvas-menu">
       <ul>
+        <label>CGHMN</label>
         <li><a href="#">Item 1</a></li>
         <li><a href="#">Item 2</a></li>
         <li><a href="#">Item 3</a></li>
         <li><a href="#">Item 4</a></li>
       </ul>
     </div>
-    <a class="js-left-off-canvas-toggle" aria-expanded="false">Menu</a>
+
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="js-left-off-canvas-toggle menu-icon" aria-expanded="false"><span></span></a>
+      </section>
+
+      <ul class='horizontal_menu lang_menu'>
+        <li><%= link_to('English', locale: :en) %></li>|
+        <li><%= link_to('Deutsche', locale: :de) %></li>|
+        <li><%= link_to('中文', locale: :zh) %></li>|
+        <li><%= link_to('русский', locale: :ru) %></li>
+      </ul>
+
+      <section class="right tab-bar-section">
+        <h1 class="title">CGHMN</h1>
+      </section>
+
+    </nav>
+
     <%= yield %>
+
+    <a class="exit-off-canvas"></a>
   </div>
 </div>
 
@@ -29,3 +50,5 @@
 
 </body>
 </html>
+
+

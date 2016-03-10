@@ -15,6 +15,11 @@
 @import "pages/*";
 @import "patterns/*";
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 
 
 .off-canvas-wrap {
@@ -47,10 +52,27 @@
 
   width: 14rem;
   z-index: 1001;
+
+  label {
+    display: block;
+    background: #444;
+    color: #999;
+    border-top: 1px solid #5e5e5e;
+    padding: 0.3rem 0.8rem;
+  }
+
+  a {
+    border-bottom: 1px solid #262626;
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    padding: 0.6rem;
+    transition: background 300ms ease;
+    &:hover {
+      background: #242424;
+    }
+  }
+
 }
-
-
-
 
 /* STYLING */
 
@@ -64,4 +86,80 @@
 
 a {
   color: #008CBA;
+}
+
+
+
+
+
+.tab-bar {
+  background: #333333;
+  color: #FFFFFF;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  position: relative;
+}
+
+
+
+
+.left-small {
+  height: 2.5rem;
+  width: 2.5rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  border-right: solid 1px #1a1a1a;
+}
+
+
+
+.tab-bar .menu-icon {
+  color: #FFFFFF;
+  display: block;
+  height: 2.5rem;
+  padding: 0;
+  position: relative;
+  text-indent: 1.94444rem;
+  transform: translate3d(0, 0, 0);
+  width: 2.5rem;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 0;
+    top: 50%;
+    margin-top: -0.4rem;
+    left: 0.8rem;
+    box-shadow: 0 0 0 1px #FFF, 0 7px 0 1px #FFF, 0 14px 0 1px #FFF;
+    width: 0.8rem;
+  }
+}
+
+.tab-bar-section.middle {
+  left: 2.5rem;
+  right: 2.5rem;
+}
+
+.tab-bar-section {
+  height: 2.5rem;
+  padding: 0 0.55556rem;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  &.right {
+    width: 5rem;
+    right: 0;
+    text-align: right;
+  }
+}
+
+.lang_menu {
+  text-align: center;
+  li {
+    margin-right: 0.3em;
+  }
 }
