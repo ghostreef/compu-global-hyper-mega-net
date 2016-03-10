@@ -1,3 +1,12 @@
 en:
   hello: "Hello"
   welcome: "Welcome"
+  cities:
+    edinburgh: 'Edinburgh'
+    london: 'London'
+    new-york: 'New York'
+    san-francisco: 'San Francisco'
+    sidney: 'Sidney'
+    singapore: 'Singapore'
+    tokyo: 'Tokyo'
+

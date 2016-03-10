@@ -1,3 +1,11 @@
 ru:
   hello: "Здравствуйте"
   welcome: "Добро пожаловат"
+  cities:
+    edinburgh: 'Эдинбург'
+    london: 'Лондон'
+    new-york: 'Новый Yorl'
+    san-francisco: 'Сан-Франциско'
+    sidney: 'Сидней'
+    singapore: 'Сингапур'
+    tokyo: 'Токийский'

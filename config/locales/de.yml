@@ -1,3 +1,11 @@
 de:
   hello: "Hallo"
   welcome: "Willkommen"
+  cities:
+    edinburgh: 'Edinburgh'
+    london: 'London'
+    new-york: 'New Yorl'
+    san-francisco: 'San Francisco'
+    sidney: 'Sidney'
+    singapore: 'Singapur'
+    tokyo: 'Tokio'

@@ -1,3 +1,11 @@
 zh:
   hello: "你好"
   welcome: "欢迎"
+  cities:
+    edinburgh: '爱丁堡'
+    london: '伦敦'
+    new-york: '纽约'
+    san-francisco: '圣弗朗西斯科'
+    sidney: '西德尼'
+    singapore: '新加坡'
+    tokyo: '东京'
