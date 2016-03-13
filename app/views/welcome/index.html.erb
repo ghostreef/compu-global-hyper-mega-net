@@ -1,4 +1,14 @@
-<div><%= t('welcome') %></div>
+<h3 class='center'><%= t('welcome') %></h3>
+
+<%= render 'tables/table', headers: @headers, rows: @rows, locals: {empty_message: '', classes: 'js-fake-table'},
+           data_tables: {
+             selector: '.js-fake-table',
+             paging: true,
+             ordering: true,
+             info: false,
+             searching: false,
+           } %>
+
 
 <table cellspacing="0" width="100%">
   <thead>

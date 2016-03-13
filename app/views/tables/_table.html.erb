@@ -1,0 +1,48 @@
+<% locals ||= {} %>
+<% classes = locals.fetch(:classes, '') %>
+<% empty_message = locals.fetch(:empty_message, 'No data') %>
+
+<%# this will evolve over time %>
+<%= content_tag :table, class: classes do %>
+  <thead>
+  <tr>
+    <% headers.each do |key| %>
+      <%# not a typo == means html_safe %>
+      <th><%== key || '&nbsp;' %></th>
+    <% end %>
+  </tr>
+  </thead>
+  <tbody>
+  <%# render row for each product %>
+  <% if rows.empty? %>
+    <tr class='empty'>
+      <td colspan="<%= headers.length %>"><%= empty_message %></td>
+    </tr>
+  <% else %>
+    <% rows.each do |row| %>
+      <tr>
+        <% row.each do |cell| %>
+          <td><%= cell %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+<% end %>
+
+
+<% data_tables ||= nil %>
+<% if data_tables.present? %>
+
+  <% content_for :javascript do %>
+
+    <script type='text/javascript'>
+      $( document ).ready(function() {
+        $('<%= data_tables.delete(:selector) %>').DataTable(<%== data_tables.to_json %>);
+      });
+    </script>
+
+  <% end %>
+
+<% end %>
+
